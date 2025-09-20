@@ -6,6 +6,7 @@ services:
     container_name: rpc-server
     volumes:
       - ../RPC:/app:rw
+    command: ["tail", "-f", "/dev/null"]
     restart: unless-stopped
   rpc-client:
     build:
